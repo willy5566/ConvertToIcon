@@ -1,0 +1,11 @@
+E:\user\Documents\Visual Studio 2019\Projects\ConvertToIcon\bin\Debug\ConvertToIcon.exe.config
+E:\user\Documents\Visual Studio 2019\Projects\ConvertToIcon\bin\Debug\ConvertToIcon.exe
+E:\user\Documents\Visual Studio 2019\Projects\ConvertToIcon\bin\Debug\ConvertToIcon.pdb
+E:\user\Documents\Visual Studio 2019\Projects\ConvertToIcon\obj\Debug\ConvertToIcon.csproj.AssemblyReference.cache
+E:\user\Documents\Visual Studio 2019\Projects\ConvertToIcon\obj\Debug\ConvertToIcon.Form1.resources
+E:\user\Documents\Visual Studio 2019\Projects\ConvertToIcon\obj\Debug\ConvertToIcon.Properties.Resources.resources
+E:\user\Documents\Visual Studio 2019\Projects\ConvertToIcon\obj\Debug\ConvertToIcon.csproj.GenerateResource.cache
+E:\user\Documents\Visual Studio 2019\Projects\ConvertToIcon\obj\Debug\ConvertToIcon.csproj.CoreCompileInputs.cache
+E:\user\Documents\Visual Studio 2019\Projects\ConvertToIcon\obj\Debug\ConvertToIcon.exe
+E:\user\Documents\Visual Studio 2019\Projects\ConvertToIcon\obj\Debug\ConvertToIcon.pdb
+E:\user\Documents\Visual Studio 2019\Projects\ConvertToIcon\obj\Debug\ConvertToIcon.ScreenForm.resources

@@ -26,6 +26,8 @@ namespace ConvertToIcon
             //choosesc.OnMouseActivity += new MouseEventHandler(choose_OnMouseActivity);
             screenForm = new ScreenForm();
             screenForm.Initial(this);
+
+            trayIcon.ContextMenuStrip = msTrayIcon;
         }
         public Icon ConvertToIcon(Image image, bool nullTonull = false)
         {
@@ -168,6 +170,40 @@ namespace ConvertToIcon
             g.ReleaseHdc(dc1);
 
             return screenImg;
+        }
+
+        private void ShowForm()
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                //如果目前是縮小狀態，才要回覆成一般大小的視窗
+                this.Show();
+                this.WindowState = FormWindowState.Normal;
+                this.ShowInTaskbar = true;
+                trayIcon.Visible = false;
+            }
+            // Activate the form.
+            this.Activate();
+            this.Focus();
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                this.ShowInTaskbar = false;
+                trayIcon.Visible = true;
+            }
+        }
+
+        private void trayIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            ShowForm();
+        }
+
+        private void miClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

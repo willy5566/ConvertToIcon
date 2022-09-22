@@ -60,8 +60,6 @@
     <Compile Include="ScreenForm.Designer.cs">
       <DependentUpon>ScreenForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserActivityHook.cs" />
-    <Compile Include="WindowMouse.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

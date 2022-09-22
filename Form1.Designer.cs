@@ -29,12 +29,17 @@ namespace ConvertToIcon
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnSaveIcon = new System.Windows.Forms.Button();
             this.pbImgShow = new System.Windows.Forms.PictureBox();
             this.btnScreen = new System.Windows.Forms.Button();
             this.chbFromHide = new System.Windows.Forms.CheckBox();
+            this.trayIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.msTrayIcon = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.miClose = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbImgShow)).BeginInit();
+            this.msTrayIcon.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSaveIcon
@@ -88,8 +93,29 @@ namespace ConvertToIcon
             this.chbFromHide.Name = "chbFromHide";
             this.chbFromHide.Size = new System.Drawing.Size(178, 30);
             this.chbFromHide.TabIndex = 3;
-            this.chbFromHide.Text = "截圖時隱藏式窗";
+            this.chbFromHide.Text = "截圖時隱藏視窗";
             this.chbFromHide.UseVisualStyleBackColor = true;
+            // 
+            // trayIcon
+            // 
+            this.trayIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("trayIcon.Icon")));
+            this.trayIcon.Text = "Icon Creator";
+            this.trayIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.trayIcon_MouseDoubleClick);
+            // 
+            // msTrayIcon
+            // 
+            this.msTrayIcon.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.miClose});
+            this.msTrayIcon.Name = "msTrayIcon";
+            this.msTrayIcon.ShowImageMargin = false;
+            this.msTrayIcon.Size = new System.Drawing.Size(156, 48);
+            // 
+            // miClose
+            // 
+            this.miClose.Name = "miClose";
+            this.miClose.Size = new System.Drawing.Size(155, 22);
+            this.miClose.Text = "關閉";
+            this.miClose.Click += new System.EventHandler(this.miClose_Click);
             // 
             // Form1
             // 
@@ -103,10 +129,11 @@ namespace ConvertToIcon
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Icon";
+            this.Resize += new System.EventHandler(this.Form1_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pbImgShow)).EndInit();
+            this.msTrayIcon.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,6 +145,9 @@ namespace ConvertToIcon
         private System.Windows.Forms.PictureBox pbImgShow;
         private System.Windows.Forms.Button btnScreen;
         private System.Windows.Forms.CheckBox chbFromHide;
+        private System.Windows.Forms.NotifyIcon trayIcon;
+        private System.Windows.Forms.ContextMenuStrip msTrayIcon;
+        private System.Windows.Forms.ToolStripMenuItem miClose;
     }
 }
 
